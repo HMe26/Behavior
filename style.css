@@ -431,3 +431,75 @@
             50% { opacity: 0.5; }
         }
     
+
+        /* --------------------------
+ * التنسيقات الأساسية والثابتة
+ * -------------------------- */
+.professional-footer {
+    /* التثبيت والموقع */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    
+    /* التصميم المرئي */
+            background: linear-gradient(135deg, var(--bg-color) 0%, #1a2332 100%);
+    color: #f0f0f0; /* لون نص فاتح */
+    padding: 15px 20px; /* زيادة التباعد الداخلي */
+    font-size: 15px;
+    font-family: 'Poppins', 'Segoe UI', sans-serif; /* خط حديث */
+    
+    /* المحاذاة والتخطيط */
+    display: flex; /* استخدام Flexbox للمحاذاة */
+    justify-content: center; /* توسيط المحتوى أفقيًا */
+    align-items: center; /* توسيط المحتوى عموديًا */
+    text-align: center;
+    
+    /* التأثيرات والاحترافية */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5); /* إضافة ظل علوي خفيف */
+    backdrop-filter: blur(8px); /* زيادة ضبابية الخلفية */
+    z-index: 1000;
+    
+    /* الانتقال السلس للتفاعلات (Transition) */
+    transition: background 0.3s ease, transform 0.3s ease;
+    
+    /* إخفاء مبدئي لـ Animation */
+    transform: translateY(100%); 
+    opacity: 0;
+}
+
+/* --------------------------
+ * تنسيق الرابط الاحترافي
+ * -------------------------- */
+.professional-footer a {
+    color: #1a73e8; /* لون أزرق احترافي للروابط */
+    text-decoration: none;
+    font-weight: 600; /* جعل النص سميكًا قليلًا */
+    margin-right: 5px; /* مسافة بسيطة قبل النص */
+    transition: color 0.3s ease;
+}
+
+/* تأثير التفاعل (Hover) */
+.professional-footer a:hover {
+    color: #4285f4; /* لون أفتح عند مرور المؤشر */
+    text-decoration: underline;
+}
+
+/* --------------------------
+ * الحركة (Animation) - Slide Up
+ * -------------------------- */
+/* هذا الكلاس سيتم إضافته بعد تحميل الصفحة بقليل لتشغيل الحركة */
+.professional-footer.is-visible {
+    transform: translateY(0); /* الحركة للأعلى */
+    opacity: 1;
+}
+
+/* --------------------------
+ * التجاوب (Responsiveness)
+ * -------------------------- */
+/* للشاشات الأصغر (مثل الهواتف) */
+@media (max-width: 600px) {
+    .professional-footer {
+        padding: 10px 10px; /* تقليل التباعد الداخلي */
+        font-size: 13px; /* تصغير حجم الخط */
+    }
+}

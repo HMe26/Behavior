@@ -335,4 +335,13 @@
             const secs = Math.floor(seconds % 60);
             return `${mins}:${secs.toString().padStart(2, '0')}`;
         }
-    
+    // ============================================================
+    // FOOTER ANIMATION ON LOAD
+    // ============================================================
+    document.addEventListener("DOMContentLoaded", function() {
+        const footer = document.querySelector('.professional-footer');
+        // تأخير بسيط (200 ملي ثانية) لضمان تحميل الصفحة ثم تشغيل الحركة
+        setTimeout(() => {
+            footer.classList.add('is-visible');
+        }, 200);
+    });

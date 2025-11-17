@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Lectures Player</title>
+    <title>Audio Lectures Behavior </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./image.png" type="image/x-icon">
+    <style>
+/* Disable text selection (highlight) */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
 </head>
 <body>
     <div class="container">
         <!-- Top Navbar -->
         <nav class="navbar" role="navigation" aria-label="Lecture navigation">
             <div class="nav-content">
-                <h1 class="nav-title">🎧 Audio Lectures</h1>
+                <h1 class="nav-title">🎧 Audio Lectures Behavior</h1>
                 <div class="lecture-buttons" id="lectureButtons" role="tablist">
                     <!-- Lecture buttons will be dynamically inserted here -->
                 </div>
@@ -31,6 +41,52 @@
             </div>
         </main>
     </div>
+    <!-- Footer -->
+
+    <!-- Elegant Footer -->
+<footer class="professional-footer">
+     𝓓𝓮𝓿𝓮𝓵𝓸𝓹𝓮𝓭 𝓫𝔂<a href="https://www.linkedin.com/in/haithem-mohamed-8b7143243/" target="_blank">𝓗𝓜𝓚𝓔</a>
+</footer>
+
+
+
     <script src="script.js"></script>
+    <!-- ================================
+     Disable Inspect / View Source
+     ================================ -->
+
+
+<script>
+// Disable Right Click
+document.addEventListener("contextmenu", function(e) {
+    e.preventDefault();
+});
+
+// Disable Copy, Cut, Paste
+document.addEventListener("copy", e => e.preventDefault());
+document.addEventListener("cut",  e => e.preventDefault());
+document.addEventListener("paste", e => e.preventDefault());
+
+// Disable selecting text
+document.addEventListener("selectstart", e => e.preventDefault());
+
+// Disable Drag (سحب الصور والملفات)
+document.addEventListener("dragstart", e => e.preventDefault());
+
+// Disable keyboard shortcuts
+document.onkeydown = function(e) {
+    // Ctrl + C / X / S / U / A
+    if (e.ctrlKey && ["c","x","s","u","a"].includes(e.key.toLowerCase()))
+        return false;
+
+    // Ctrl + Shift + I / J / C
+    if (e.ctrlKey && e.shiftKey && ["i","j","c"].includes(e.key.toLowerCase()))
+        return false;
+
+    // F12
+    if (e.key === "F12") return false;
+};
+</script>
+
 </body>
 </html>
